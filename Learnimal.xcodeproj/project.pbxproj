@@ -16,6 +16,9 @@
 		E98DC2C82B56DC770027EC3E /* LearnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2C72B56DC770027EC3E /* LearnimalTests.swift */; };
 		E98DC2D22B56DC770027EC3E /* LearnimalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2D12B56DC770027EC3E /* LearnimalUITests.swift */; };
 		E98DC2D42B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */; };
+		E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2E82B56E6540027EC3E /* MainTabView.swift */; };
+		E98DC2EB2B56E8B50027EC3E /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */; };
+		E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		E98DC2CD2B56DC770027EC3E /* LearnimalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnimalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98DC2D12B56DC770027EC3E /* LearnimalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalUITests.swift; sourceTree = "<group>"; };
 		E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E98DC2E82B56E6540027EC3E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
+		E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,8 @@
 		E98DC2B02B56DC750027EC3E /* Learnimal */ = {
 			isa = PBXGroup;
 			children = (
-				E98DC2B12B56DC750027EC3E /* LearnimalApp.swift */,
-				E98DC2B32B56DC750027EC3E /* ContentView.swift */,
+				E98DC2E12B56E4E60027EC3E /* Module */,
+				E98DC2E02B56E4D00027EC3E /* App */,
 				E98DC2B52B56DC770027EC3E /* Assets.xcassets */,
 				E98DC2BA2B56DC770027EC3E /* Persistence.swift */,
 				E98DC2BC2B56DC770027EC3E /* Learnimal.xcdatamodeld */,
@@ -131,6 +137,73 @@
 				E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */,
 			);
 			path = LearnimalUITests;
+			sourceTree = "<group>";
+		};
+		E98DC2E02B56E4D00027EC3E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2B12B56DC750027EC3E /* LearnimalApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E98DC2E12B56E4E60027EC3E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2E72B56E6340027EC3E /* Root */,
+				E98DC2E62B56E5410027EC3E /* Common */,
+				E98DC2E52B56E5240027EC3E /* Favorite */,
+				E98DC2E42B56E5100027EC3E /* Detail */,
+				E98DC2E32B56E5080027EC3E /* Home */,
+				E98DC2E22B56E5010027EC3E /* TabBar */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		E98DC2E22B56E5010027EC3E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2E82B56E6540027EC3E /* MainTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E98DC2E32B56E5080027EC3E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */,
+				E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E98DC2E42B56E5100027EC3E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E98DC2E52B56E5240027EC3E /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		E98DC2E62B56E5410027EC3E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E98DC2E72B56E6340027EC3E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2B32B56DC750027EC3E /* ContentView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +338,11 @@
 			files = (
 				E98DC2BB2B56DC770027EC3E /* Persistence.swift in Sources */,
 				E98DC2B42B56DC750027EC3E /* ContentView.swift in Sources */,
+				E98DC2EB2B56E8B50027EC3E /* AnimalListView.swift in Sources */,
 				E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */,
 				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
+				E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */,
+				E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
