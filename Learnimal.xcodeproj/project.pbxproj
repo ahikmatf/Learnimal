@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2B12B56DC750027EC3E /* LearnimalApp.swift */; };
+		E98DC2B42B56DC750027EC3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2B32B56DC750027EC3E /* ContentView.swift */; };
+		E98DC2B62B56DC770027EC3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98DC2B52B56DC770027EC3E /* Assets.xcassets */; };
+		E98DC2B92B56DC770027EC3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98DC2B82B56DC770027EC3E /* Preview Assets.xcassets */; };
+		E98DC2BB2B56DC770027EC3E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2BA2B56DC770027EC3E /* Persistence.swift */; };
+		E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2BC2B56DC770027EC3E /* Learnimal.xcdatamodeld */; };
+		E98DC2C82B56DC770027EC3E /* LearnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2C72B56DC770027EC3E /* LearnimalTests.swift */; };
+		E98DC2D22B56DC770027EC3E /* LearnimalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2D12B56DC770027EC3E /* LearnimalUITests.swift */; };
+		E98DC2D42B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E98DC2C42B56DC770027EC3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E98DC2A62B56DC750027EC3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E98DC2AD2B56DC750027EC3E;
+			remoteInfo = Learnimal;
+		};
+		E98DC2CE2B56DC770027EC3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E98DC2A62B56DC750027EC3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E98DC2AD2B56DC750027EC3E;
+			remoteInfo = Learnimal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E98DC2AE2B56DC750027EC3E /* Learnimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learnimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98DC2B12B56DC750027EC3E /* LearnimalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalApp.swift; sourceTree = "<group>"; };
+		E98DC2B32B56DC750027EC3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E98DC2B52B56DC770027EC3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E98DC2B82B56DC770027EC3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E98DC2BA2B56DC770027EC3E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		E98DC2BD2B56DC770027EC3E /* Learnimal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Learnimal.xcdatamodel; sourceTree = "<group>"; };
+		E98DC2C32B56DC770027EC3E /* LearnimalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnimalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98DC2C72B56DC770027EC3E /* LearnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalTests.swift; sourceTree = "<group>"; };
+		E98DC2CD2B56DC770027EC3E /* LearnimalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnimalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98DC2D12B56DC770027EC3E /* LearnimalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalUITests.swift; sourceTree = "<group>"; };
+		E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E98DC2AB2B56DC750027EC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98DC2C02B56DC770027EC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98DC2CA2B56DC770027EC3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E98DC2A52B56DC750027EC3E = {
+			isa = PBXGroup;
+			children = (
+				E98DC2B02B56DC750027EC3E /* Learnimal */,
+				E98DC2C62B56DC770027EC3E /* LearnimalTests */,
+				E98DC2D02B56DC770027EC3E /* LearnimalUITests */,
+				E98DC2AF2B56DC750027EC3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E98DC2AF2B56DC750027EC3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2AE2B56DC750027EC3E /* Learnimal.app */,
+				E98DC2C32B56DC770027EC3E /* LearnimalTests.xctest */,
+				E98DC2CD2B56DC770027EC3E /* LearnimalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E98DC2B02B56DC750027EC3E /* Learnimal */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2B12B56DC750027EC3E /* LearnimalApp.swift */,
+				E98DC2B32B56DC750027EC3E /* ContentView.swift */,
+				E98DC2B52B56DC770027EC3E /* Assets.xcassets */,
+				E98DC2BA2B56DC770027EC3E /* Persistence.swift */,
+				E98DC2BC2B56DC770027EC3E /* Learnimal.xcdatamodeld */,
+				E98DC2B72B56DC770027EC3E /* Preview Content */,
+			);
+			path = Learnimal;
+			sourceTree = "<group>";
+		};
+		E98DC2B72B56DC770027EC3E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2B82B56DC770027EC3E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E98DC2C62B56DC770027EC3E /* LearnimalTests */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2C72B56DC770027EC3E /* LearnimalTests.swift */,
+			);
+			path = LearnimalTests;
+			sourceTree = "<group>";
+		};
+		E98DC2D02B56DC770027EC3E /* LearnimalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2D12B56DC770027EC3E /* LearnimalUITests.swift */,
+				E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */,
+			);
+			path = LearnimalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E98DC2AD2B56DC750027EC3E /* Learnimal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E98DC2D72B56DC770027EC3E /* Build configuration list for PBXNativeTarget "Learnimal" */;
+			buildPhases = (
+				E98DC2AA2B56DC750027EC3E /* Sources */,
+				E98DC2AB2B56DC750027EC3E /* Frameworks */,
+				E98DC2AC2B56DC750027EC3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Learnimal;
+			productName = Learnimal;
+			productReference = E98DC2AE2B56DC750027EC3E /* Learnimal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E98DC2C22B56DC770027EC3E /* LearnimalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E98DC2DA2B56DC770027EC3E /* Build configuration list for PBXNativeTarget "LearnimalTests" */;
+			buildPhases = (
+				E98DC2BF2B56DC770027EC3E /* Sources */,
+				E98DC2C02B56DC770027EC3E /* Frameworks */,
+				E98DC2C12B56DC770027EC3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E98DC2C52B56DC770027EC3E /* PBXTargetDependency */,
+			);
+			name = LearnimalTests;
+			productName = LearnimalTests;
+			productReference = E98DC2C32B56DC770027EC3E /* LearnimalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E98DC2CC2B56DC770027EC3E /* LearnimalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E98DC2DD2B56DC770027EC3E /* Build configuration list for PBXNativeTarget "LearnimalUITests" */;
+			buildPhases = (
+				E98DC2C92B56DC770027EC3E /* Sources */,
+				E98DC2CA2B56DC770027EC3E /* Frameworks */,
+				E98DC2CB2B56DC770027EC3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E98DC2CF2B56DC770027EC3E /* PBXTargetDependency */,
+			);
+			name = LearnimalUITests;
+			productName = LearnimalUITests;
+			productReference = E98DC2CD2B56DC770027EC3E /* LearnimalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E98DC2A62B56DC750027EC3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					E98DC2AD2B56DC750027EC3E = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					E98DC2C22B56DC770027EC3E = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E98DC2AD2B56DC750027EC3E;
+					};
+					E98DC2CC2B56DC770027EC3E = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E98DC2AD2B56DC750027EC3E;
+					};
+				};
+			};
+			buildConfigurationList = E98DC2A92B56DC750027EC3E /* Build configuration list for PBXProject "Learnimal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E98DC2A52B56DC750027EC3E;
+			productRefGroup = E98DC2AF2B56DC750027EC3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E98DC2AD2B56DC750027EC3E /* Learnimal */,
+				E98DC2C22B56DC770027EC3E /* LearnimalTests */,
+				E98DC2CC2B56DC770027EC3E /* LearnimalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E98DC2AC2B56DC750027EC3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98DC2B92B56DC770027EC3E /* Preview Assets.xcassets in Resources */,
+				E98DC2B62B56DC770027EC3E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98DC2C12B56DC770027EC3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98DC2CB2B56DC770027EC3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E98DC2AA2B56DC750027EC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98DC2BB2B56DC770027EC3E /* Persistence.swift in Sources */,
+				E98DC2B42B56DC750027EC3E /* ContentView.swift in Sources */,
+				E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */,
+				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98DC2BF2B56DC770027EC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98DC2C82B56DC770027EC3E /* LearnimalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98DC2C92B56DC770027EC3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98DC2D42B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift in Sources */,
+				E98DC2D22B56DC770027EC3E /* LearnimalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E98DC2C52B56DC770027EC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E98DC2AD2B56DC750027EC3E /* Learnimal */;
+			targetProxy = E98DC2C42B56DC770027EC3E /* PBXContainerItemProxy */;
+		};
+		E98DC2CF2B56DC770027EC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E98DC2AD2B56DC750027EC3E /* Learnimal */;
+			targetProxy = E98DC2CE2B56DC770027EC3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E98DC2D52B56DC770027EC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E98DC2D62B56DC770027EC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E98DC2D82B56DC770027EC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Learnimal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatah.local.Learnimal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E98DC2D92B56DC770027EC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Learnimal/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatah.local.Learnimal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E98DC2DB2B56DC770027EC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatah.local.LearnimalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learnimal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Learnimal";
+			};
+			name = Debug;
+		};
+		E98DC2DC2B56DC770027EC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatah.local.LearnimalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learnimal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Learnimal";
+			};
+			name = Release;
+		};
+		E98DC2DE2B56DC770027EC3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatah.local.LearnimalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Learnimal;
+			};
+			name = Debug;
+		};
+		E98DC2DF2B56DC770027EC3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatah.local.LearnimalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Learnimal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E98DC2A92B56DC750027EC3E /* Build configuration list for PBXProject "Learnimal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98DC2D52B56DC770027EC3E /* Debug */,
+				E98DC2D62B56DC770027EC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E98DC2D72B56DC770027EC3E /* Build configuration list for PBXNativeTarget "Learnimal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98DC2D82B56DC770027EC3E /* Debug */,
+				E98DC2D92B56DC770027EC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E98DC2DA2B56DC770027EC3E /* Build configuration list for PBXNativeTarget "LearnimalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98DC2DB2B56DC770027EC3E /* Debug */,
+				E98DC2DC2B56DC770027EC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E98DC2DD2B56DC770027EC3E /* Build configuration list for PBXNativeTarget "LearnimalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E98DC2DE2B56DC770027EC3E /* Debug */,
+				E98DC2DF2B56DC770027EC3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E98DC2BC2B56DC770027EC3E /* Learnimal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E98DC2BD2B56DC770027EC3E /* Learnimal.xcdatamodel */,
+			);
+			currentVersion = E98DC2BD2B56DC770027EC3E /* Learnimal.xcdatamodel */;
+			path = Learnimal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E98DC2A62B56DC750027EC3E /* Project object */;
+}
