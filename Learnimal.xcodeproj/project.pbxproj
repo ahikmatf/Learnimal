@@ -19,6 +19,7 @@
 		E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2E82B56E6540027EC3E /* MainTabView.swift */; };
 		E98DC2EB2B56E8B50027EC3E /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */; };
 		E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */; };
+		E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E98DC2E82B56E6540027EC3E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 		E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */,
 				E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */,
+				E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
 				E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */,
 				E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */,
+				E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

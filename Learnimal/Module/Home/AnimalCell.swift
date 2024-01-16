@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AnimalCell: View {
+    var showVariance: () -> Void
+    
     private let width = (UIScreen.main.bounds.width / 2) - 24
     
     var body: some View {
@@ -26,7 +28,7 @@ struct AnimalCell: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    showVariance()
                 }, label: {
                     Image(systemName: "info.circle.fill")
                         .resizable()
@@ -39,5 +41,7 @@ struct AnimalCell: View {
 }
 
 #Preview {
-    AnimalCell()
+    AnimalCell {
+        //
+    }
 }

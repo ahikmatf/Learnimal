@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AnimalListView: View {
+    @State private var showingSheet = false
+    
     private let width = (UIScreen.main.bounds.width / 2) - 32
     private let items = [
         GridItem(.flexible()),
@@ -19,7 +21,9 @@ struct AnimalListView: View {
             ScrollView {
                 LazyVGrid(columns: items) {
                     ForEach(0..<8) { animal in
-                        AnimalCell()
+                        AnimalCell(showVariance: {
+                            showVariance()
+                        })
                             .frame(width: width)
                     }
                 }
@@ -28,6 +32,13 @@ struct AnimalListView: View {
             .padding()
             .scrollIndicators(.hidden)
         }
+        .sheet(isPresented: $showingSheet) {
+            AnimalVarianceSheetView()
+        }
+    }
+    
+    private func showVariance() {
+        showingSheet.toggle()
     }
 }
 
