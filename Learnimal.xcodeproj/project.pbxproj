@@ -20,6 +20,8 @@
 		E98DC2EB2B56E8B50027EC3E /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */; };
 		E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */; };
 		E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */; };
+		E98DC2F12B578C960027EC3E /* AnimalImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2F02B578C960027EC3E /* AnimalImagesView.swift */; };
+		E98DC2F32B578D780027EC3E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2F22B578D780027EC3E /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 		E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceSheetView.swift; sourceTree = "<group>"; };
+		E98DC2F02B578C960027EC3E /* AnimalImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImagesView.swift; sourceTree = "<group>"; };
+		E98DC2F22B578D780027EC3E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 		E98DC2E42B56E5100027EC3E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC2F02B578C960027EC3E /* AnimalImagesView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 		E98DC2E62B56E5410027EC3E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC2F22B578D780027EC3E /* FeedCell.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -345,7 +351,9 @@
 				E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */,
 				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
 				E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */,
+				E98DC2F32B578D780027EC3E /* FeedCell.swift in Sources */,
 				E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */,
+				E98DC2F12B578C960027EC3E /* AnimalImagesView.swift in Sources */,
 				E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,10 +21,15 @@ struct AnimalListView: View {
             ScrollView {
                 LazyVGrid(columns: items) {
                     ForEach(0..<8) { animal in
-                        AnimalCell(showVariance: {
-                            showVariance()
-                        })
+                        NavigationLink {
+                            AnimalImagesView(name: "animal \(animal)")
+                        } label: {
+                            AnimalCell(showVariance: {
+                                showVariance()
+                            })
                             .frame(width: width)
+                        }
+                        .tint(.black)
                     }
                 }
             }
