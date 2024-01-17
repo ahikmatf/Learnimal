@@ -21,7 +21,7 @@ struct MainTabView: View {
                     }
                 }
             
-            Text("Favorite List")
+            FavoriteFeedView()
                 .tabItem {
                     VStack {
                         Image(systemName: selectedTab == 0 ? "star.fill" : "star")
