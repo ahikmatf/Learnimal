@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeAnimalView: View {
-    @State private var showingSheet = false
+    @State private var showSheet = false
     
     private let width = (UIScreen.main.bounds.width / 2) - 32
     private let items = [
@@ -37,13 +37,13 @@ struct HomeAnimalView: View {
             .padding()
             .scrollIndicators(.hidden)
         }
-        .sheet(isPresented: $showingSheet) {
+        .sheet(isPresented: $showSheet) {
             AnimalVarianceSheetView()
         }
     }
     
     private func showVariance() {
-        showingSheet.toggle()
+        showSheet.toggle()
     }
 }
 

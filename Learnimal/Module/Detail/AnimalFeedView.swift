@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AnimalFeedView: View {
     var name: String
+    @State private var showTabBar = false
     
     var body: some View {
         ScrollView {
@@ -22,6 +23,9 @@ struct AnimalFeedView: View {
             }
             .padding()
         }
+        .onAppear { showTabBar = false }
+        .onDisappear { showTabBar = true }
+        .toolbar(showTabBar ? .visible : .hidden, for: .tabBar)
         .navigationTitle(name)
         .navigationBarTitleDisplayMode(.inline)
         .scrollIndicators(.hidden)
