@@ -17,10 +17,10 @@
 		E98DC2D22B56DC770027EC3E /* LearnimalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2D12B56DC770027EC3E /* LearnimalUITests.swift */; };
 		E98DC2D42B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */; };
 		E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2E82B56E6540027EC3E /* MainTabView.swift */; };
-		E98DC2EB2B56E8B50027EC3E /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */; };
+		E98DC2EB2B56E8B50027EC3E /* HomeAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EA2B56E8B50027EC3E /* HomeAnimalView.swift */; };
 		E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */; };
 		E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */; };
-		E98DC2F12B578C960027EC3E /* AnimalImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2F02B578C960027EC3E /* AnimalImagesView.swift */; };
+		E98DC2F12B578C960027EC3E /* AnimalFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2F02B578C960027EC3E /* AnimalFeedView.swift */; };
 		E98DC2F32B578D780027EC3E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2F22B578D780027EC3E /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,10 +55,10 @@
 		E98DC2D12B56DC770027EC3E /* LearnimalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalUITests.swift; sourceTree = "<group>"; };
 		E98DC2D32B56DC770027EC3E /* LearnimalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnimalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E98DC2E82B56E6540027EC3E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
+		E98DC2EA2B56E8B50027EC3E /* HomeAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimalView.swift; sourceTree = "<group>"; };
 		E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceSheetView.swift; sourceTree = "<group>"; };
-		E98DC2F02B578C960027EC3E /* AnimalImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImagesView.swift; sourceTree = "<group>"; };
+		E98DC2F02B578C960027EC3E /* AnimalFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFeedView.swift; sourceTree = "<group>"; };
 		E98DC2F22B578D780027EC3E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,7 +177,7 @@
 		E98DC2E32B56E5080027EC3E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E98DC2EA2B56E8B50027EC3E /* AnimalListView.swift */,
+				E98DC2EA2B56E8B50027EC3E /* HomeAnimalView.swift */,
 				E98DC2EC2B56E97B0027EC3E /* AnimalCell.swift */,
 				E98DC2EE2B56F45E0027EC3E /* AnimalVarianceSheetView.swift */,
 			);
@@ -187,7 +187,7 @@
 		E98DC2E42B56E5100027EC3E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				E98DC2F02B578C960027EC3E /* AnimalImagesView.swift */,
+				E98DC2F02B578C960027EC3E /* AnimalFeedView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -347,13 +347,13 @@
 			files = (
 				E98DC2BB2B56DC770027EC3E /* Persistence.swift in Sources */,
 				E98DC2B42B56DC750027EC3E /* ContentView.swift in Sources */,
-				E98DC2EB2B56E8B50027EC3E /* AnimalListView.swift in Sources */,
+				E98DC2EB2B56E8B50027EC3E /* HomeAnimalView.swift in Sources */,
 				E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */,
 				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
 				E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */,
 				E98DC2F32B578D780027EC3E /* FeedCell.swift in Sources */,
 				E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */,
-				E98DC2F12B578C960027EC3E /* AnimalImagesView.swift in Sources */,
+				E98DC2F12B578C960027EC3E /* AnimalFeedView.swift in Sources */,
 				E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

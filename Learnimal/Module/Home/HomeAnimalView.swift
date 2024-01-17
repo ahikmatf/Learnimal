@@ -1,5 +1,5 @@
 //
-//  AnimalListView.swift
+//  HomeAnimalView.swift
 //  Learnimal
 //
 //  Created by Asep Hikmat Fatahillah on 16/01/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimalListView: View {
+struct HomeAnimalView: View {
     @State private var showingSheet = false
     
     private let width = (UIScreen.main.bounds.width / 2) - 32
@@ -22,7 +22,7 @@ struct AnimalListView: View {
                 LazyVGrid(columns: items) {
                     ForEach(0..<8) { animal in
                         NavigationLink {
-                            AnimalImagesView(name: "animal \(animal)")
+                            AnimalFeedView(name: "animal \(animal)")
                         } label: {
                             AnimalCell(showVariance: {
                                 showVariance()
@@ -48,5 +48,5 @@ struct AnimalListView: View {
 }
 
 #Preview {
-    AnimalListView()
+    HomeAnimalView()
 }

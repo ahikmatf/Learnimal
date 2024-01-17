@@ -12,7 +12,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            AnimalListView()
+            HomeAnimalView()
                 .tabItem {
                     VStack {
                         Image(systemName: selectedTab == 0 ? "cat.fill" : "cat")

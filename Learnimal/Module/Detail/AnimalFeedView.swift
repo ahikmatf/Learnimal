@@ -1,5 +1,5 @@
 //
-//  AnimalImagesView.swift
+//  AnimalFeedView.swift
 //  Learnimal
 //
 //  Created by Asep Hikmat Fatahillah on 17/01/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimalImagesView: View {
+struct AnimalFeedView: View {
     var name: String
     
     var body: some View {
@@ -29,5 +29,5 @@ struct AnimalImagesView: View {
 }
 
 #Preview {
-    AnimalImagesView(name: "Cheetah")
+    AnimalFeedView(name: "Cheetah")
 }
