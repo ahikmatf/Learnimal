@@ -11,11 +11,31 @@ struct AnimalVarianceSheetView: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
-        Button("Press to dismiss") {
-            dismiss()
+        VStack {
+            Text("Cheetah's Variance")
+                .font(.title2)
+                .padding(.vertical)
+            
+            ScrollView {
+                LazyVStack(spacing: 0) {
+                    ForEach(0 ..< 10) { variance in
+                        AnimalVarianceCell()
+                    }
+                }
+            }
+            
+            Button(action: {
+                dismiss()
+            }, label: {
+                Text("Dismiss")
+                    .frame(maxWidth: .infinity)
+                    .padding([.vertical])
+                    .background(Color.yellow)
+            })
         }
-        .font(.title)
-        .padding()
-        .background(.black)
     }
+}
+
+#Preview {
+    AnimalVarianceSheetView()
 }

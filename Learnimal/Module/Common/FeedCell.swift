@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FeedModel {
     let name: String?
-    let stringId: String?
+    let imageId: String?
     let title: String
     let subtitle: String
 }
@@ -21,7 +21,7 @@ struct FeedCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(model.name ?? model.stringId ?? "")
+                Text(model.name ?? model.imageId ?? "")
                 
                 Spacer()
                 
@@ -51,5 +51,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell(isFavorite: true, model: FeedModel(name: "the name", stringId: "", title: "critopher colombus", subtitle: "animal is fighing for his life"))
+    FeedCell(isFavorite: true, model: FeedModel(name: "the name", imageId: "", title: "critopher colombus", subtitle: "animal is fighing for his life"))
 }
