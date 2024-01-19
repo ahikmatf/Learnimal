@@ -25,6 +25,7 @@
 		E98DC2FC2B5837EF0027EC3E /* FavoriteFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2FB2B5837EF0027EC3E /* FavoriteFeedView.swift */; };
 		E98DC2FE2B5907050027EC3E /* AnimalVarianceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2FD2B5907050027EC3E /* AnimalVarianceCell.swift */; };
 		E98DC3002B5914210027EC3E /* FavoriteFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2FF2B5914210027EC3E /* FavoriteFilterSheet.swift */; };
+		E98DC3022B5A78CE0027EC3E /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3012B5A78CE0027EC3E /* RemoteImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		E98DC2FB2B5837EF0027EC3E /* FavoriteFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFeedView.swift; sourceTree = "<group>"; };
 		E98DC2FD2B5907050027EC3E /* AnimalVarianceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceCell.swift; sourceTree = "<group>"; };
 		E98DC2FF2B5914210027EC3E /* FavoriteFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFilterSheet.swift; sourceTree = "<group>"; };
+		E98DC3012B5A78CE0027EC3E /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				E98DC2F22B578D780027EC3E /* FeedCell.swift */,
+				E98DC3012B5A78CE0027EC3E /* RemoteImageView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */,
 				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
 				E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */,
+				E98DC3022B5A78CE0027EC3E /* RemoteImageView.swift in Sources */,
 				E98DC2FC2B5837EF0027EC3E /* FavoriteFeedView.swift in Sources */,
 				E98DC2F32B578D780027EC3E /* FeedCell.swift in Sources */,
 				E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */,
