@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct FavoriteFeedView: View {
+    @State private var showFilter = false
     @State private var showTabBar = false
+    @State private var selectedOption: String? = "show all"
     
     var body: some View {
         NavigationStack {
@@ -25,6 +27,19 @@ struct FavoriteFeedView: View {
             }
             .navigationTitle("Favorite")
             .scrollIndicators(.hidden)
+            .toolbar {
+                Button {
+                    showFilter.toggle()
+                } label: {
+                    Image(systemName: "line.3.horizontal.decrease.circle")
+//                    Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                }
+            }
+            .sheet(isPresented: $showFilter) {
+                FavoriteFilterSheet(filterDidTap: { selectedOption in
+                    //
+                }, options: ["show all", "cheetah", "fox"], selectedOption: $selectedOption)
+            }
         }
     }
 }

@@ -24,6 +24,7 @@
 		E98DC2F32B578D780027EC3E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2F22B578D780027EC3E /* FeedCell.swift */; };
 		E98DC2FC2B5837EF0027EC3E /* FavoriteFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2FB2B5837EF0027EC3E /* FavoriteFeedView.swift */; };
 		E98DC2FE2B5907050027EC3E /* AnimalVarianceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2FD2B5907050027EC3E /* AnimalVarianceCell.swift */; };
+		E98DC3002B5914210027EC3E /* FavoriteFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC2FF2B5914210027EC3E /* FavoriteFilterSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		E98DC2F22B578D780027EC3E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		E98DC2FB2B5837EF0027EC3E /* FavoriteFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFeedView.swift; sourceTree = "<group>"; };
 		E98DC2FD2B5907050027EC3E /* AnimalVarianceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceCell.swift; sourceTree = "<group>"; };
+		E98DC2FF2B5914210027EC3E /* FavoriteFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFilterSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				E98DC2FB2B5837EF0027EC3E /* FavoriteFeedView.swift */,
+				E98DC2FF2B5914210027EC3E /* FavoriteFilterSheet.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				E98DC2F32B578D780027EC3E /* FeedCell.swift in Sources */,
 				E98DC2ED2B56E97B0027EC3E /* AnimalCell.swift in Sources */,
 				E98DC2F12B578C960027EC3E /* AnimalFeedView.swift in Sources */,
+				E98DC3002B5914210027EC3E /* FavoriteFilterSheet.swift in Sources */,
 				E98DC2FE2B5907050027EC3E /* AnimalVarianceCell.swift in Sources */,
 				E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */,
 			);
