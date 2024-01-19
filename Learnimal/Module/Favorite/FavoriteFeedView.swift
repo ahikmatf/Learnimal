@@ -17,10 +17,10 @@ struct FavoriteFeedView: View {
             ScrollView {
                 LazyVStack(spacing: 0) {
                     ForEach(0 ..< 10) { post in
-                        FeedCell(isFavorite: post % 2 == 0, model: FeedModel(name: "whale", imageId: nil, title: "cristiano ronaldo", subtitle: "animal is fighting with another animal"))
-                        
-                        Divider()
-                            .padding(.vertical)
+                        FeedCell(
+                            model: FeedModel(name: "whale", imageId: nil, title: "cristiano ronaldo", subtitle: "animal is fighting with another animal", isFavorite: true),
+                            imageDidDoubleTap: {}
+                        )
                     }
                 }
                 .padding()

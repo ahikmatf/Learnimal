@@ -10,7 +10,7 @@ import SwiftUI
 struct RemoteImageView: View {
     var imageStringUrl: String
     var cornerRadius: CGFloat = 24
-    var imageDidTap: () -> Void
+    var imageDidDoubleTap: () -> Void
     
     var body: some View {
         AsyncImage(url: URL(string: imageStringUrl)) { phase in
@@ -32,7 +32,7 @@ struct RemoteImageView: View {
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
                     .onTapGesture(count: 2) {
-                        self.imageDidTap()
+                        self.imageDidDoubleTap()
                     }
             default:
                 Image(uiImage: UIImage())

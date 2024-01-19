@@ -10,15 +10,22 @@ import SwiftUI
 struct AnimalFeedView: View {
     var name: String
     @State private var showTabBar = false
+    @State private var isFavorite = false
+    var model: [FeedModel] = [
+        
+    ]
     
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 0) {
                 ForEach(0 ..< 10) { post in
-                    FeedCell(isFavorite: post % 2 == 0, model: FeedModel(name: nil, imageId: "123123", title: "cristiano ronaldo", subtitle: "animal is fighting with another animal"))
-                    
-                    Divider()
-                        .padding(.vertical)
+                    FeedCell(
+                        model: FeedModel(name: nil, imageId: "123123", title: "cristiano ronaldo", subtitle: "animal is fighting with another animal", isFavorite: isFavorite),
+                        likeable: true,
+                        imageDidDoubleTap: {
+                            self.isFavorite.toggle()
+                        }
+                    )
                 }
             }
             .padding()

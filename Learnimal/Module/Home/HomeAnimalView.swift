@@ -24,12 +24,10 @@ struct HomeAnimalView: View {
                         NavigationLink {
                             AnimalFeedView(name: "animal \(animal)")
                         } label: {
-                            AnimalCell(showVariance: {
-                                showVariance()
-                            })
-                            .frame(width: width)
+                            AnimalCell(showVariance: { showVariance() })
+                                .frame(width: width)
+                                .tint(.black)
                         }
-                        .tint(.black)
                     }
                 }
             }

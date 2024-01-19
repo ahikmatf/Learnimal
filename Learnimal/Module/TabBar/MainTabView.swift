@@ -20,15 +20,19 @@ struct MainTabView: View {
                         Text("Animal")
                     }
                 }
+                .onAppear { selectedTab = 0 }
+                .tag(0)
             
             FavoriteFeedView()
                 .tabItem {
                     VStack {
-                        Image(systemName: selectedTab == 0 ? "star.fill" : "star")
-                            .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
+                        Image(systemName: selectedTab == 1 ? "star.fill" : "star")
+                            .environment(\.symbolVariants, selectedTab == 1 ? .fill : .none)
                         Text("Favorite")
                     }
                 }
+                .onAppear { selectedTab = 1 }
+                .tag(1)
         }
         .tint(.black)
     }
