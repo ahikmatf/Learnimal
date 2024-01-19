@@ -9,21 +9,23 @@ import SwiftUI
 
 struct AnimalFeedView: View {
     var name: String
+    @StateObject var viewModel = AnimalFeedViewModel(store: PersistenceStore.shared)
     @State private var showTabBar = false
     @State private var isFavorite = false
-    var model: [FeedModel] = [
-        
-    ]
     
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 0) {
-                ForEach(0 ..< 10) { post in
+                ForEach(0..<viewModel.animalImages.count, id: \.self) { index in
+                    var animalImage = viewModel.animalImages[index]
+                    
                     FeedCell(
-                        model: FeedModel(name: nil, imageId: "123123", title: "cristiano ronaldo", subtitle: "animal is fighting with another animal", isFavorite: isFavorite),
+                        model: FeedModel(name: nil, imageId: "\(animalImage.id)", imageStringUrl: animalImage.imageStringUrl, title: animalImage.photographer, subtitle: animalImage.alt, isFavorite: animalImage.isFavorite),
                         likeable: true,
                         imageDidDoubleTap: {
-                            self.isFavorite.toggle()
+                            animalImage.isFavorite.toggle()
+                            imageDidDoubleTap(isFavorite: animalImage.isFavorite, model: animalImage)
+                            viewModel.animalImages[index].isFavorite = animalImage.isFavorite
                         }
                     )
                 }
@@ -36,6 +38,10 @@ struct AnimalFeedView: View {
         .navigationTitle(name)
         .navigationBarTitleDisplayMode(.inline)
         .scrollIndicators(.hidden)
+    }
+    
+    func imageDidDoubleTap(isFavorite: Bool, model: AnimalImage) {
+        viewModel.imageDidDoubleTap(isFavorite: isFavorite, model: model)
     }
 }
 

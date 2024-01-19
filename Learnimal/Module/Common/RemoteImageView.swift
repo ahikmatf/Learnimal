@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RemoteImageView: View {
+    var filename: String?
     var imageStringUrl: String
     var cornerRadius: CGFloat = 24
     var imageDidDoubleTap: () -> Void
@@ -29,19 +30,24 @@ struct RemoteImageView: View {
             case .success(let image):
                 image.resizable()
                     .frame(maxWidth: .infinity)
-                    .aspectRatio(contentMode: .fit)
+                    .scaledToFill()
+                    .aspectRatio(1, contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
                     .onTapGesture(count: 2) {
                         self.imageDidDoubleTap()
                     }
             default:
-                Image(uiImage: UIImage())
+                Image(filename ?? "", bundle: nil)
                     .resizable()
                     .frame(maxWidth: .infinity)
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-                    .background(Color.gray)
+                    .background(filename == nil ? Color.gray : Color.clear)
             }
         }
     }
+}
+
+#Preview {
+    RemoteImageView(filename: nil, imageStringUrl: "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/A000360.jpg", cornerRadius: 24, imageDidDoubleTap: {})
 }

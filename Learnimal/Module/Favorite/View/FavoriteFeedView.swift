@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FavoriteFeedView: View {
+    @StateObject var viewModel = FavoriteFeedViewModel(store: PersistenceStore.shared)
     @State private var showFilter = false
     @State private var showTabBar = false
     @State private var selectedOption: String? = "show all"
@@ -16,9 +17,11 @@ struct FavoriteFeedView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    ForEach(0 ..< 10) { post in
+                    ForEach(0..<viewModel.favoriteImages.count, id: \.self) { index in
+                        var favoriteImage = viewModel.favoriteImages[index]
+                        
                         FeedCell(
-                            model: FeedModel(name: "whale", imageId: nil, title: "cristiano ronaldo", subtitle: "animal is fighting with another animal", isFavorite: true),
+                            model: FeedModel(name: favoriteImage.name, imageId: "\(favoriteImage.id)", imageStringUrl: favoriteImage.imageStringUrl, title: favoriteImage.photographer, subtitle: favoriteImage.alt, isFavorite: favoriteImage.isFavorite),
                             imageDidDoubleTap: {}
                         )
                     }
