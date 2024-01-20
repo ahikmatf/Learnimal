@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct HomeAnimalView: View {
-    @State private var showSheet = false
     @StateObject var viewModel = HomeAnimalViewModel()
+    @State private var showSheet = false
+    @State private var animalSelected: String = ""
     
     private let width = (UIScreen.main.bounds.width / 2) - 32
     private let items = [
@@ -25,10 +26,12 @@ struct HomeAnimalView: View {
                         NavigationLink {
                             AnimalFeedView(name: "\(animal.name)")
                         } label: {
-                            AnimalCell(model: animal, showVariance: { showVariance() })
-                                .frame(width: width)
-                                .id(animal.id)
-                                .tint(.black)
+                            AnimalCell(model: animal, showVariance: { name in
+                                showVariance(name: name)
+                            })
+                            .frame(width: width)
+                            .id(animal.id)
+                            .tint(.black)
                         }
                     }
                 }
@@ -38,12 +41,15 @@ struct HomeAnimalView: View {
             .scrollIndicators(.hidden)
         }
         .sheet(isPresented: $showSheet) {
-            AnimalVarianceSheetView()
+            AnimalVarianceSheetView(name: animalSelected, viewModels: viewModel.variancesSheetViewModel)
         }
     }
     
-    private func showVariance() {
-        showSheet.toggle()
+    private func showVariance(name: String) {
+        animalSelected = name
+        viewModel.fetchAnimalVariance(name: name) { _ in
+            showSheet.toggle()
+        }
     }
 }
 

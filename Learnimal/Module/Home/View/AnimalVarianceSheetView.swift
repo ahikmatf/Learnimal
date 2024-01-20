@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct AnimalVarianceSheetView: View {
+    var name: String
+    var viewModels: [AnimalVarianceSheetViewModel]
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
         VStack {
-            Text("Cheetah's Variance")
+            Text("\(name)'s Variance")
                 .font(.title2)
                 .padding(.vertical)
             
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    ForEach(0 ..< 10) { variance in
-                        AnimalVarianceCell()
+                    ForEach(0..<viewModels.count, id:\.self) { index in
+                        let model = viewModels[index]
+                        AnimalVarianceCell(model: model)
                     }
                 }
             }
@@ -37,5 +40,5 @@ struct AnimalVarianceSheetView: View {
 }
 
 #Preview {
-    AnimalVarianceSheetView()
+    AnimalVarianceSheetView(name: "Elephant", viewModels: [])
 }

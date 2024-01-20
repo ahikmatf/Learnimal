@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimalCell: View {
     var model: Animal
-    var showVariance: () -> Void
+    var showVariance: (String) -> Void
     
     private let width = (UIScreen.main.bounds.width / 2) - 24
     
@@ -29,7 +29,7 @@ struct AnimalCell: View {
                 Spacer()
                 
                 Button(action: {
-                    showVariance()
+                    showVariance(model.name)
                 }, label: {
                     Image(systemName: "info.circle.fill")
                         .resizable()
@@ -42,5 +42,5 @@ struct AnimalCell: View {
 }
 
 #Preview {
-    AnimalCell(model: Animal(id: "123", name: "Elephant", filename: "animal-fox"), showVariance: {})
+    AnimalCell(model: Animal(id: "123", name: "Elephant", filename: "animal-fox"), showVariance: { _ in })
 }

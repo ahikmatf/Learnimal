@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AnimalVarianceCell: View {
+    var model: AnimalVarianceSheetViewModel
+    
     var body: some View {
         HStack {
             RemoteImageView(
@@ -18,10 +20,15 @@ struct AnimalVarianceCell: View {
             .frame(width: 128, height: 128)
             
             VStack(alignment: .leading) {
-                Text("Animal name")
-                Text("Slogan")
-                Text("Found in")
-                Text("Will Prey")
+                Text(model.varianceName)
+                    .fontWeight(.semibold)
+                    .font(.subheadline)
+                Text(model.slogan)
+                    .font(.caption)
+                Text(model.foundAt)
+                    .font(.caption)
+                Text(model.willPrey)
+                    .font(.caption)
             }
             
             Spacer()
@@ -31,5 +38,5 @@ struct AnimalVarianceCell: View {
 }
 
 #Preview {
-    AnimalVarianceCell()
+    AnimalVarianceCell(model: .init())
 }

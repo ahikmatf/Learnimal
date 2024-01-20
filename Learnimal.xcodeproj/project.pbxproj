@@ -33,6 +33,8 @@
 		E98DC3112B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3102B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift */; };
 		E98DC3142B5B02570027EC3E /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3132B5B02570027EC3E /* PersistenceStore.swift */; };
 		E98DC3172B5BC0390027EC3E /* IdGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3162B5BC0390027EC3E /* IdGenerator.swift */; };
+		E98DC31B2B5BD0B50027EC3E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC31A2B5BD0B50027EC3E /* APIManager.swift */; };
+		E98DC31E2B5BD14A0027EC3E /* AnimalVariance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC31D2B5BD14A0027EC3E /* AnimalVariance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		E98DC3102B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFeedViewModel.swift; sourceTree = "<group>"; };
 		E98DC3132B5B02570027EC3E /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
 		E98DC3162B5BC0390027EC3E /* IdGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdGenerator.swift; sourceTree = "<group>"; };
+		E98DC31A2B5BD0B50027EC3E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E98DC31D2B5BD14A0027EC3E /* AnimalVariance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVariance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		E98DC2B02B56DC750027EC3E /* Learnimal */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC3192B5BCF5D0027EC3E /* Network */,
 				E98DC3152B5BC0200027EC3E /* Helper */,
 				E98DC3122B5B02450027EC3E /* Persistence */,
 				E98DC2E12B56E4E60027EC3E /* Module */,
@@ -296,6 +301,23 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		E98DC3192B5BCF5D0027EC3E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC31C2B5BD0FE0027EC3E /* Model */,
+				E98DC31A2B5BD0B50027EC3E /* APIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E98DC31C2B5BD0FE0027EC3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC31D2B5BD14A0027EC3E /* AnimalVariance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +452,7 @@
 				E98DC3172B5BC0390027EC3E /* IdGenerator.swift in Sources */,
 				E98DC2B42B56DC750027EC3E /* ContentView.swift in Sources */,
 				E98DC2EB2B56E8B50027EC3E /* HomeAnimalView.swift in Sources */,
+				E98DC31B2B5BD0B50027EC3E /* APIManager.swift in Sources */,
 				E98DC30C2B5AC7E80027EC3E /* AnimalImage.swift in Sources */,
 				E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */,
 				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
@@ -444,6 +467,7 @@
 				E98DC3002B5914210027EC3E /* FavoriteFilterSheet.swift in Sources */,
 				E98DC3112B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift in Sources */,
 				E98DC2FE2B5907050027EC3E /* AnimalVarianceCell.swift in Sources */,
+				E98DC31E2B5BD14A0027EC3E /* AnimalVariance.swift in Sources */,
 				E98DC3042B5AB0AC0027EC3E /* HomeAnimalViewModel.swift in Sources */,
 				E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */,
 				E98DC30A2B5AC78D0027EC3E /* AnimalFeedViewModel.swift in Sources */,

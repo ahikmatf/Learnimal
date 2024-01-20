@@ -9,6 +9,8 @@ import Foundation
 
 class HomeAnimalViewModel: ObservableObject {
     @Published var animals = [Animal]()
+    @Published var variancesSheetViewModel = [AnimalVarianceSheetViewModel]()
+    private let apiManager: APIManager = APIManager()
     
     init() {
         fetchAnimals()
@@ -26,5 +28,32 @@ class HomeAnimalViewModel: ObservableObject {
             .init(id: IdGenerator.generate(index: 7, name: "Penguin"), name: "Penguin", filename: "animal-fox")
         ]
     }
+    
+    func fetchAnimalVariance(name: String, completion: @escaping (Bool) -> Void) {
+        apiManager.fetchAnimalVariance(name: name) { isSuccess in
+            self.variancesSheetViewModel = self.apiManager.variancesSheetViewModel
+            completion(isSuccess)
+        }
+    }
 }
 
+struct AnimalVarianceSheetViewModel {
+    let varianceName: String
+    let slogan: String
+    let foundAt: String
+    let willPrey: String
+    
+    init(variance: VarianceResult) {
+        self.varianceName = variance.name
+        self.slogan = variance.characteristics?.slogan ?? "No slogan found"
+        self.foundAt = "Found in \(variance.locations?.joined(separator: ", ") ?? "the world")"
+        self.willPrey = "Will prey \(variance.characteristics?.prey ?? "food")"
+    }
+    
+    init() {
+        self.varianceName = "template"
+        self.slogan = "template"
+        self.foundAt = "template"
+        self.willPrey = "template"
+    }
+}
