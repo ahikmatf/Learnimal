@@ -32,7 +32,11 @@ struct AnimalFeedView: View {
             }
             .padding()
         }
-        .onAppear { showTabBar = false }
+        .onAppear {
+            showTabBar = false
+            viewModel.fetchAnimalImages(name: name)
+            viewModel.markFavoriteImages()
+        }
         .onDisappear { showTabBar = true }
         .toolbar(showTabBar ? .visible : .hidden, for: .tabBar)
         .navigationTitle(name)

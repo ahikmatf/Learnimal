@@ -13,7 +13,6 @@ class FavoriteFeedViewModel: ObservableObject {
     
     init(store: PersistenceStoreProtocol) {
         self.store = store
-        fetchFavoriteImages()
     }
     
     func fetchFavoriteImages() {

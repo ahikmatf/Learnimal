@@ -18,7 +18,7 @@ struct FavoriteFeedView: View {
             ScrollView {
                 LazyVStack(spacing: 0) {
                     ForEach(0..<viewModel.favoriteImages.count, id: \.self) { index in
-                        var favoriteImage = viewModel.favoriteImages[index]
+                        let favoriteImage = viewModel.favoriteImages[index]
                         
                         FeedCell(
                             model: FeedModel(name: favoriteImage.name, imageId: "\(favoriteImage.id)", imageStringUrl: favoriteImage.imageStringUrl, title: favoriteImage.photographer, subtitle: favoriteImage.alt, isFavorite: favoriteImage.isFavorite),
@@ -43,6 +43,9 @@ struct FavoriteFeedView: View {
                     //
                 }, options: ["show all", "cheetah", "fox"], selectedOption: $selectedOption)
             }
+        }
+        .onAppear {
+            viewModel.fetchFavoriteImages()
         }
     }
 }
