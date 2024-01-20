@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct FavoriteFilterSheet: View {
+    @StateObject var viewModel = HomeAnimalViewModel()
+    
     var filterDidTap: (String) -> Void
-    var options: [String]
-    @Binding var selectedOption: String?
+    @Binding var selectedOption: String
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -20,14 +21,17 @@ struct FavoriteFilterSheet: View {
                 .padding(.vertical)
             
             List {
-                ForEach(options, id: \.self) { option in
+                SelectionCell(option: "Show All", selectedOption: self.$selectedOption)
+                let options = viewModel.animals.map { $0.name }
+                ForEach(0..<options.count, id: \.self) { index in
+                    let option = options[index]
                     SelectionCell(option: option, selectedOption: self.$selectedOption)
                 }
             }
             
             Button(action: {
                 dismiss()
-                filterDidTap("")
+                filterDidTap(selectedOption)
             }, label: {
                 Text("Set")
                     .frame(maxWidth: .infinity)
@@ -41,7 +45,7 @@ struct FavoriteFilterSheet: View {
 struct SelectionCell: View {
 
     let option: String
-    @Binding var selectedOption: String?
+    @Binding var selectedOption: String
 
     var body: some View {
         HStack {
@@ -61,5 +65,5 @@ struct SelectionCell: View {
 #Preview {
     FavoriteFilterSheet(filterDidTap: { selectedOption in
         //
-    }, options: ["show all", "cheetah", "fox"], selectedOption: .constant("show all"))
+    }, selectedOption: .constant("Show All"))
 }

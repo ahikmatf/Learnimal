@@ -11,14 +11,15 @@ struct FavoriteFeedView: View {
     @StateObject var viewModel = FavoriteFeedViewModel(store: PersistenceStore.shared)
     @State private var showFilter = false
     @State private var showTabBar = false
-    @State private var selectedOption: String? = "show all"
+    @State private var selectedOption: String = "Show All"
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    ForEach(0..<viewModel.favoriteImages.count, id: \.self) { index in
-                        let favoriteImage = viewModel.favoriteImages[index]
+                    let data = viewModel.filteredFavoriteImages(query: selectedOption)
+                    ForEach(0..<data.count, id: \.self) { index in
+                        let favoriteImage = data[index]
                         
                         FeedCell(
                             model: FeedModel(name: favoriteImage.name, imageId: "\(favoriteImage.id)", imageStringUrl: favoriteImage.imageStringUrl, title: favoriteImage.photographer, subtitle: favoriteImage.alt, isFavorite: favoriteImage.isFavorite),
@@ -34,14 +35,13 @@ struct FavoriteFeedView: View {
                 Button {
                     showFilter.toggle()
                 } label: {
-                    Image(systemName: "line.3.horizontal.decrease.circle")
-//                    Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                    Image(systemName: selectedOption == "Show All" ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
                 }
             }
             .sheet(isPresented: $showFilter) {
                 FavoriteFilterSheet(filterDidTap: { selectedOption in
-                    //
-                }, options: ["show all", "cheetah", "fox"], selectedOption: $selectedOption)
+                    
+                }, selectedOption: $selectedOption)
             }
         }
         .onAppear {

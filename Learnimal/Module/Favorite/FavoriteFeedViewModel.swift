@@ -15,7 +15,15 @@ class FavoriteFeedViewModel: ObservableObject {
         self.store = store
     }
     
-    func fetchFavoriteImages() {
+    func filteredFavoriteImages(query: String) -> [AnimalImage] {
+        if query == "Show All" {
+            return favoriteImages
+        } else {
+            return favoriteImages.filter { $0.name == query }
+        }
+    }
+    
+func fetchFavoriteImages() {
         favoriteImages = store.loadAllFavoriteImages()
     }
 }
