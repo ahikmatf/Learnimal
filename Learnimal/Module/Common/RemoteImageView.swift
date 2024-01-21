@@ -37,7 +37,7 @@ struct RemoteImageView: View {
                         self.imageDidDoubleTap()
                     }
             default:
-                Image(filename ?? "", bundle: nil)
+                Image(filename ?? "animal-elephant", bundle: nil)
                     .resizable()
                     .frame(maxWidth: .infinity)
                     .aspectRatio(contentMode: .fit)

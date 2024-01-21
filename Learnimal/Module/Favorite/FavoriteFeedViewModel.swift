@@ -8,14 +8,14 @@
 import Foundation
 
 class FavoriteFeedViewModel: ObservableObject {
-    @Published var favoriteImages = [AnimalImage]()
+    @Published var favoriteImages = [AnimalImageViewModel]()
     private var store: PersistenceStoreProtocol
     
     init(store: PersistenceStoreProtocol) {
         self.store = store
     }
     
-    func filteredFavoriteImages(query: String) -> [AnimalImage] {
+    func filteredFavoriteImages(query: String) -> [AnimalImageViewModel] {
         if query == "Show All" {
             return favoriteImages
         } else {

@@ -22,7 +22,7 @@ struct FavoriteFilterSheet: View {
             
             List {
                 SelectionCell(option: "Show All", selectedOption: self.$selectedOption)
-                let options = viewModel.animals.map { $0.name }
+                let options = viewModel.animalListViewModel.map { $0.name }
                 ForEach(0..<options.count, id: \.self) { index in
                     let option = options[index]
                     SelectionCell(option: option, selectedOption: self.$selectedOption)

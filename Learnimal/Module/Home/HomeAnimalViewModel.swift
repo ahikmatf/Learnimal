@@ -8,25 +8,33 @@
 import Foundation
 
 class HomeAnimalViewModel: ObservableObject {
-    @Published var animals = [Animal]()
     @Published var variancesSheetViewModel = [AnimalVarianceSheetViewModel]()
+    @Published var animalListViewModel = [AnimalImageViewModel]()
     private let apiManager: APIManager = APIManager()
+    private let animalList = ["Elephant", "Lion", "Fox", "Dog", "Shark", "Turtle", "Whale", "Penguin"]
     
     init() {
-        fetchAnimals()
+        prepareAnimalData()
     }
     
-    func fetchAnimals() {
-        self.animals = [
-            .init(id: IdGenerator.generate(index: 0, name: "Elephant"), name: "Elephant", filename: "animal-elephant"),
-            .init(id: IdGenerator.generate(index: 1, name: "Lion"), name: "Lion", filename: "animal-lion"),
-            .init(id: IdGenerator.generate(index: 2, name: "Fox"), name: "Fox", filename: "animal-fox"),
-            .init(id: IdGenerator.generate(index: 3, name: "Dog"), name: "Dog", filename: "animal-fox"),
-            .init(id: IdGenerator.generate(index: 4, name: "Shark"), name: "Shark", filename: "animal-fox"),
-            .init(id: IdGenerator.generate(index: 5, name: "Turtle"), name: "Turtle", filename: "animal-fox"),
-            .init(id: IdGenerator.generate(index: 6, name: "Whale"), name: "Whale", filename: "animal-fox"),
-            .init(id: IdGenerator.generate(index: 7, name: "Penguin"), name: "Penguin", filename: "animal-fox")
+    func prepareAnimalData() {
+        let animalListViewModel: [AnimalImageViewModel] = [
+            .init(name: "Elephant"),
+            .init(name: "Lion"),
+            .init(name: "Fox"),
+            .init(name: "Dog"),
+            .init(name: "Shark"),
+            .init(name: "Turtle"),
+            .init(name: "Whale"),
+            .init(name: "Penguin")
         ]
+        
+        for (_, element) in animalListViewModel.enumerated() {
+            fetchAnimalImage(name: element.name) { viewModel in
+                guard let viewModel = viewModel else { return }
+                self.animalListViewModel.append(viewModel)
+            }
+        }
     }
     
     func fetchAnimalVariance(name: String, completion: @escaping (Bool) -> Void) {
@@ -34,6 +42,10 @@ class HomeAnimalViewModel: ObservableObject {
             self.variancesSheetViewModel = self.apiManager.variancesSheetViewModel
             completion(isSuccess)
         }
+    }
+    
+    private func fetchAnimalImage(name: String, completion: @escaping (AnimalImageViewModel?) -> Void) {
+        apiManager.fetchAnimalImage(query: name, completion: completion)
     }
 }
 

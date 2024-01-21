@@ -8,7 +8,7 @@
 import Foundation
 
 class AnimalFeedViewModel: ObservableObject {
-    @Published var animalImages = [AnimalImage]()
+    @Published var animalImages = [AnimalImageViewModel]()
     private var store: PersistenceStoreProtocol
     
     init(store: PersistenceStoreProtocol) {
@@ -45,7 +45,7 @@ class AnimalFeedViewModel: ObservableObject {
         }
     }
     
-    func imageDidDoubleTap(isFavorite: Bool, model: AnimalImage) {
+    func imageDidDoubleTap(isFavorite: Bool, model: AnimalImageViewModel) {
         if isFavorite {
             addImageAsFavorite(model: model)
         } else {
@@ -53,11 +53,11 @@ class AnimalFeedViewModel: ObservableObject {
         }
     }
     
-    private func addImageAsFavorite(model: AnimalImage) {
+    private func addImageAsFavorite(model: AnimalImageViewModel) {
         store.addImageAsFavorite(model: model)
     }
     
-    private func removeImageFromFavorite(model: AnimalImage) {
+    private func removeImageFromFavorite(model: AnimalImageViewModel) {
         store.removeImageFromFavorite(model: model)
     }
 }

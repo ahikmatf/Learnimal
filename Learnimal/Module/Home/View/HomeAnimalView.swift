@@ -22,15 +22,16 @@ struct HomeAnimalView: View {
         NavigationStack {
             ScrollView {
                 LazyVGrid(columns: items) {
-                    ForEach(viewModel.animals) { animal in
+                    ForEach(0..<viewModel.animalListViewModel.count, id:\.self) { index in
+                        let animalImageViewModel = viewModel.animalListViewModel[index]
                         NavigationLink {
-                            AnimalFeedView(name: "\(animal.name)")
+                            AnimalFeedView(name: "\(animalImageViewModel.name)")
                         } label: {
-                            AnimalCell(model: animal, showVariance: { name in
+                            AnimalCell(model: animalImageViewModel, showVariance: { name in
                                 showVariance(name: name)
                             })
                             .frame(width: width)
-                            .id(animal.id)
+                            .id(animalImageViewModel.id)
                             .tint(.black)
                         }
                     }

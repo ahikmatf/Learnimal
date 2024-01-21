@@ -8,26 +8,26 @@
 import Foundation
 
 protocol PersistenceStoreProtocol {
-    func loadAllFavoriteImages() -> [AnimalImage]
-    func addImageAsFavorite(model: AnimalImage)
-    func removeImageFromFavorite(model: AnimalImage)
+    func loadAllFavoriteImages() -> [AnimalImageViewModel]
+    func addImageAsFavorite(model: AnimalImageViewModel)
+    func removeImageFromFavorite(model: AnimalImageViewModel)
 }
 
 class PersistenceStore: PersistenceStoreProtocol {
-    private var favoriteImages = [AnimalImage]()
+    private var favoriteImages = [AnimalImageViewModel]()
     
     static let shared = PersistenceStore()
     init() {}
     
-    func loadAllFavoriteImages() -> [AnimalImage] {
+    func loadAllFavoriteImages() -> [AnimalImageViewModel] {
         favoriteImages
     }
     
-    func addImageAsFavorite(model: AnimalImage) {
+    func addImageAsFavorite(model: AnimalImageViewModel) {
         favoriteImages.append(model)
     }
     
-    func removeImageFromFavorite(model: AnimalImage) {
+    func removeImageFromFavorite(model: AnimalImageViewModel) {
         guard let index = favoriteImages.firstIndex(where: { $0.id == model.id }) else { return }
         _ = favoriteImages.remove(at: index)
     }

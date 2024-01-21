@@ -44,7 +44,7 @@ struct AnimalFeedView: View {
         .scrollIndicators(.hidden)
     }
     
-    func imageDidDoubleTap(isFavorite: Bool, model: AnimalImage) {
+    func imageDidDoubleTap(isFavorite: Bool, model: AnimalImageViewModel) {
         viewModel.imageDidDoubleTap(isFavorite: isFavorite, model: model)
     }
 }

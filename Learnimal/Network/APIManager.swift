@@ -10,6 +10,7 @@ import Combine
 
 class APIManager {
     @Published var variancesSheetViewModel = [AnimalVarianceSheetViewModel]()
+    @Published var animalImagesViewModel = [AnimalImageViewModel]()
     private var subscriber = Set<AnyCancellable>()
     
     func fetchAnimalVariance(name: String, completion: @escaping (Bool) -> Void) {
@@ -26,6 +27,24 @@ class APIManager {
             case .failure(let error):
                 print(error.localizedDescription)
                 completion(false)
+            }
+        }
+    }
+    
+    func fetchAnimalImage(query: String, completion: @escaping (AnimalImageViewModel?) -> Void) {
+        let animalsUrlString = "https://api.pexels.com/v1/search?query=\(query)&per_page=1&orientation=square&size=small"
+        guard let animalsUrl = URL(string: animalsUrlString) else { return }
+        var urlRequest = URLRequest(url: animalsUrl)
+        urlRequest.setValue("F0RsC7L6viQO7bzFmZTKs7hwGWhXlwm5TjAozyXUwkTmB8INisxbwjVg", forHTTPHeaderField: "Authorization")
+        
+        fetch(url: urlRequest) { (result: Result<ImageResult, Error>) in
+            switch result {
+            case .success(let result):
+                guard let photo = result.photos.first else { completion(nil); return }
+                completion(AnimalImageViewModel(name: query, photo: photo))
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
             }
         }
     }
