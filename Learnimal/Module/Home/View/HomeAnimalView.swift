@@ -11,6 +11,7 @@ struct HomeAnimalView: View {
     @StateObject var viewModel = HomeAnimalViewModel()
     @State private var showSheet = false
     @State private var animalSelected: String = ""
+    @State var isVarianceLoading = true
     
     private let width = (UIScreen.main.bounds.width / 2) - 32
     private let items = [
@@ -28,6 +29,7 @@ struct HomeAnimalView: View {
                             AnimalFeedView(name: "\(animalImageViewModel.name)")
                         } label: {
                             AnimalCell(model: animalImageViewModel, showVariance: { name in
+                                isVarianceLoading = true
                                 showVariance(name: name)
                             })
                             .frame(width: width)
@@ -42,14 +44,15 @@ struct HomeAnimalView: View {
             .scrollIndicators(.hidden)
         }
         .sheet(isPresented: $showSheet) {
-            AnimalVarianceSheetView(name: animalSelected, viewModels: viewModel.variancesSheetViewModel)
+            AnimalVarianceSheetView(name: animalSelected, viewModels: viewModel.variancesSheetViewModel, isLoading: $isVarianceLoading)
         }
     }
     
     private func showVariance(name: String) {
         animalSelected = name
+        showSheet.toggle()
         viewModel.fetchAnimalVariance(name: name) { _ in
-            showSheet.toggle()
+            isVarianceLoading = false
         }
     }
 }
