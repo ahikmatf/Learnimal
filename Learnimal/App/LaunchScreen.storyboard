@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal-elephant" translatesAutoresizingMaskIntoConstraints="NO" id="uUZ-l3-6bj">
+                                <rect key="frame" x="76.666666666666686" y="222.66666666666663" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uUZ-l3-6bj" secondAttribute="height" id="CcN-Qz-LRG"/>
+                                    <constraint firstAttribute="width" constant="240" id="U0i-HK-vFy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learnimal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-Vd-Q8x">
+                                <rect key="frame" x="114.33333333333333" y="482.66666666666669" width="164.33333333333337" height="43.000000000000057"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uUZ-l3-6bj" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="9qD-pN-Bv8"/>
+                            <constraint firstItem="uUZ-l3-6bj" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" constant="-96" id="CgS-hk-p4j"/>
+                            <constraint firstItem="Uoy-Vd-Q8x" firstAttribute="top" secondItem="uUZ-l3-6bj" secondAttribute="bottom" constant="20" id="eQB-rU-chD"/>
+                            <constraint firstItem="Uoy-Vd-Q8x" firstAttribute="centerX" secondItem="uUZ-l3-6bj" secondAttribute="centerX" id="uLz-9w-UHN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="animal-elephant" width="4675" height="4675"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

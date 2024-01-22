@@ -35,6 +35,7 @@
 		E98DC31E2B5BD14A0027EC3E /* AnimalVarianceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC31D2B5BD14A0027EC3E /* AnimalVarianceResult.swift */; };
 		E98DC3202B5C16880027EC3E /* AnimalImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC31F2B5C16880027EC3E /* AnimalImageResult.swift */; };
 		E98DC3232B5C38DD0027EC3E /* AnimalImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3222B5C38DC0027EC3E /* AnimalImageViewModel.swift */; };
+		E98DC3292B5EA6E00027EC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98DC3282B5EA6E00027EC3E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		E98DC31D2B5BD14A0027EC3E /* AnimalVarianceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceResult.swift; sourceTree = "<group>"; };
 		E98DC31F2B5C16880027EC3E /* AnimalImageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImageResult.swift; sourceTree = "<group>"; };
 		E98DC3222B5C38DC0027EC3E /* AnimalImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImageViewModel.swift; sourceTree = "<group>"; };
+		E98DC3282B5EA6E00027EC3E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				E98DC2B12B56DC750027EC3E /* LearnimalApp.swift */,
+				E98DC3282B5EA6E00027EC3E /* LaunchScreen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98DC3292B5EA6E00027EC3E /* LaunchScreen.storyboard in Resources */,
 				E98DC2B92B56DC770027EC3E /* Preview Assets.xcassets in Resources */,
 				E98DC2B62B56DC770027EC3E /* Assets.xcassets in Resources */,
 			);
@@ -631,6 +635,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,6 +663,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
