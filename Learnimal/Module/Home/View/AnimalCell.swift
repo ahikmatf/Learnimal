@@ -30,7 +30,7 @@ struct AnimalCell: View {
                 Button(action: {
                     showVariance(model.name)
                 }, label: {
-                    Image(systemName: "info.circle.fill")
+                    Image(systemName: "book.fill")
                         .resizable()
                         .tint(.black)
                         .frame(width: 16, height: 16)

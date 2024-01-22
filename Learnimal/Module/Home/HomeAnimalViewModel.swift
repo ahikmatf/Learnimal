@@ -38,8 +38,16 @@ class HomeAnimalViewModel: ObservableObject {
     }
     
     func fetchAnimalVariance(name: String, completion: @escaping (Bool) -> Void) {
+        self.variancesSheetViewModel.removeAll()
         apiManager.fetchAnimalVariance(name: name) { isSuccess in
-            self.variancesSheetViewModel = self.apiManager.variancesSheetViewModel
+            for (index, element) in self.apiManager.variancesSheetViewModel.enumerated() {
+                self.fetchAnimalImage(name: element.varianceName) { imageModels in
+                    guard let imageModel = imageModels.first else { return }
+                    var updatedElement = element
+                    updatedElement.imageStringUrl = imageModel.imageStringUrl
+                    self.variancesSheetViewModel.append(updatedElement)
+                }
+            }
             completion(isSuccess)
         }
     }
@@ -50,12 +58,14 @@ class HomeAnimalViewModel: ObservableObject {
 }
 
 struct AnimalVarianceSheetViewModel {
+    var imageStringUrl: String
     let varianceName: String
     let slogan: String
     let foundAt: String
     let willPrey: String
     
     init(variance: VarianceResult) {
+        self.imageStringUrl = ""
         self.varianceName = variance.name
         self.slogan = variance.characteristics?.slogan ?? "No slogan found"
         self.foundAt = "Found in \(variance.locations?.joined(separator: ", ") ?? "the world")"
@@ -63,6 +73,7 @@ struct AnimalVarianceSheetViewModel {
     }
     
     init() {
+        self.imageStringUrl = ""
         self.varianceName = "template"
         self.slogan = "template"
         self.foundAt = "template"

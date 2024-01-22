@@ -13,7 +13,7 @@ struct AnimalVarianceCell: View {
     var body: some View {
         HStack {
             RemoteImageView(
-                imageStringUrl: "https://gist.github.com/alienlebarge/605560c2961cb3025038/raw/b75d209134f0fb64f04a5ee9ff274ceabf6e26e8/dodgetocat_v2.png",
+                imageStringUrl: model.imageStringUrl,
                 cornerRadius: 24,
                 imageDidDoubleTap: {}
             )
@@ -24,7 +24,8 @@ struct AnimalVarianceCell: View {
                     .fontWeight(.semibold)
                     .font(.subheadline)
                 Text(model.slogan)
-                    .font(.caption)
+                    .font(.footnote)
+                    .fontWeight(.medium)
                 Text(model.foundAt)
                     .font(.caption)
                 Text(model.willPrey)
