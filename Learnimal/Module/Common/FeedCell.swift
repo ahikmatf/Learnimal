@@ -67,11 +67,11 @@ struct FeedCell: View {
                 )
                 
                 if favoriteAnimation {
-                    Image(systemName: "star.fill")
+                    Image(systemName: model.isFavorite ? "star.fill" : "star")
                         .resizable()
                         .frame(width: 128, height: 128)
                         .transition(.opacity)
-                        .opacity(favoriteAnimation ? 1 : 0)
+                        .shadow(color: .white, radius: 20)
                 }
             }
             
