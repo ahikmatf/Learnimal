@@ -43,7 +43,7 @@ struct FavoriteFeedView: View {
                 }, selectedOption: $selectedOption)
             }
             .onAppear {
-                viewModel.filteredFavoriteImages(query: "Show All")
+                viewModel.filteredFavoriteImages(query: selectedOption)
             }
         }
     }
