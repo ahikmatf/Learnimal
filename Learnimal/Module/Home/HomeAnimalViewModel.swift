@@ -40,7 +40,7 @@ class HomeAnimalViewModel: ObservableObject {
     func fetchAnimalVariance(name: String, completion: @escaping (Bool) -> Void) {
         self.variancesSheetViewModel.removeAll()
         apiManager.fetchAnimalVariance(name: name) { isSuccess in
-            for (index, element) in self.apiManager.variancesSheetViewModel.enumerated() {
+            for (_, element) in self.apiManager.variancesSheetViewModel.enumerated() {
                 self.fetchAnimalImage(name: element.varianceName) { imageModels in
                     guard let imageModel = imageModels.first else { return }
                     var updatedElement = element

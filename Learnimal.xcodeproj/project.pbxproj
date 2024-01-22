@@ -142,7 +142,6 @@
 				E98DC2E12B56E4E60027EC3E /* Module */,
 				E98DC2E02B56E4D00027EC3E /* App */,
 				E98DC2B52B56DC770027EC3E /* Assets.xcassets */,
-				E98DC2BA2B56DC770027EC3E /* Persistence.swift */,
 				E98DC2BC2B56DC770027EC3E /* Learnimal.xcdatamodeld */,
 				E98DC2B72B56DC770027EC3E /* Preview Content */,
 			);
@@ -271,6 +270,7 @@
 		E98DC3122B5B02450027EC3E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC2BA2B56DC770027EC3E /* Persistence.swift */,
 				E98DC3132B5B02570027EC3E /* PersistenceStore.swift */,
 			);
 			path = Persistence;
