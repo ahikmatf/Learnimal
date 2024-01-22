@@ -17,12 +17,11 @@ struct FavoriteFeedView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    let data = viewModel.filteredFavoriteImages(query: selectedOption)
-                    ForEach(0..<data.count, id: \.self) { index in
-                        let favoriteImage = data[index]
+                    ForEach(0 ..< viewModel.filteredFavorites.count, id: \.self) { index in
+                        let favoriteImage = viewModel.filteredFavorites[index]
                         
                         FeedCell(
-                            model: FeedModel(name: favoriteImage.name, imageId: "\(favoriteImage.id)", imageStringUrl: favoriteImage.imageStringUrl, title: favoriteImage.photographer, subtitle: favoriteImage.alt, isFavorite: favoriteImage.isFavorite),
+                            model: FeedModel(imageViewModel: favoriteImage),
                             imageDidDoubleTap: {}
                         )
                     }
@@ -40,12 +39,12 @@ struct FavoriteFeedView: View {
             }
             .sheet(isPresented: $showFilter) {
                 FavoriteFilterSheet(filterDidTap: { selectedOption in
-                    
+                    viewModel.filteredFavoriteImages(query: selectedOption)
                 }, selectedOption: $selectedOption)
             }
-        }
-        .onAppear {
-            viewModel.fetchFavoriteImages()
+            .onAppear {
+                viewModel.filteredFavoriteImages(query: "Show All")
+            }
         }
     }
 }
