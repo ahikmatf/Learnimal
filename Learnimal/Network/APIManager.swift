@@ -8,7 +8,15 @@
 import Foundation
 import Combine
 
-class APIManager {
+protocol APIManagerProtocol {
+    var variancesSheetViewModel: [AnimalVarianceSheetViewModel] { get }
+    var animalImagesViewModel: [AnimalImageViewModel] { get }
+    
+    func fetchAnimalVariance(name: String, completion: @escaping (Bool) -> Void)
+    func fetchAnimalImage(query: String, count: Int, completion: @escaping ([AnimalImageViewModel]) -> Void)
+}
+
+class APIManager: APIManagerProtocol {
     @Published var variancesSheetViewModel = [AnimalVarianceSheetViewModel]()
     @Published var animalImagesViewModel = [AnimalImageViewModel]()
     private var subscriber = Set<AnyCancellable>()

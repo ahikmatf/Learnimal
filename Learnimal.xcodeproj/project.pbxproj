@@ -41,6 +41,7 @@
 		E98DC3382B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3372B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift */; };
 		E9A841542B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A841532B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift */; };
 		E9A841562B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A841552B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift */; };
+		E9A841582B5EBD7100AE3882 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A841572B5EBD7100AE3882 /* APIManagerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		E98DC3392B5EB6DE0027EC3E /* Learnimal.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Learnimal.xctestplan; sourceTree = "<group>"; };
 		E9A841532B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimalViewModelTests.swift; sourceTree = "<group>"; };
 		E9A841552B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceSheetViewModel.swift; sourceTree = "<group>"; };
+		E9A841572B5EBD7100AE3882 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				E98DC3352B5EB30F0027EC3E /* PersistenceStoreMock.swift */,
+				E9A841572B5EBD7100AE3882 /* APIManagerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A841582B5EBD7100AE3882 /* APIManagerMock.swift in Sources */,
 				E98DC2C82B56DC770027EC3E /* LearnimalTests.swift in Sources */,
 				E98DC3362B5EB30F0027EC3E /* PersistenceStoreMock.swift in Sources */,
 				E98DC3382B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift in Sources */,

@@ -10,10 +10,11 @@ import Foundation
 class HomeAnimalViewModel: ObservableObject {
     @Published var variancesSheetViewModel = [AnimalVarianceSheetViewModel]()
     @Published var animalListViewModel = [AnimalImageViewModel]()
-    private let apiManager: APIManager = APIManager()
+    private let apiManager: APIManagerProtocol
     private let animalList = ["Elephant", "Lion", "Fox", "Dog", "Shark", "Turtle", "Whale", "Penguin"]
     
-    init() {
+    init(apiManager: APIManagerProtocol = APIManager()) {
+        self.apiManager = apiManager
         prepareAnimalData()
     }
     
@@ -53,6 +54,6 @@ class HomeAnimalViewModel: ObservableObject {
     }
     
     private func fetchAnimalImage(name: String, completion: @escaping ([AnimalImageViewModel]) -> Void) {
-        apiManager.fetchAnimalImage(query: name, completion: completion)
+        apiManager.fetchAnimalImage(query: name, count: 1, completion: completion)
     }
 }
