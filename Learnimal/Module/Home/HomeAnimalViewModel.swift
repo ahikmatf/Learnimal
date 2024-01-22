@@ -30,8 +30,8 @@ class HomeAnimalViewModel: ObservableObject {
         ]
         
         for (_, element) in animalListViewModel.enumerated() {
-            fetchAnimalImage(name: element.name) { viewModel in
-                guard let viewModel = viewModel else { return }
+            fetchAnimalImage(name: element.name) { viewModels in
+                guard let viewModel = viewModels.first else { return }
                 self.animalListViewModel.append(viewModel)
             }
         }
@@ -44,7 +44,7 @@ class HomeAnimalViewModel: ObservableObject {
         }
     }
     
-    private func fetchAnimalImage(name: String, completion: @escaping (AnimalImageViewModel?) -> Void) {
+    private func fetchAnimalImage(name: String, completion: @escaping ([AnimalImageViewModel]) -> Void) {
         apiManager.fetchAnimalImage(query: name, completion: completion)
     }
 }

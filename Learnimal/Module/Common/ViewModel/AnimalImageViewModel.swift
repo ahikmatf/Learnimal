@@ -7,7 +7,11 @@
 
 import Foundation
 
-class AnimalImageViewModel {
+struct AnimalImageViewModel: Identifiable, Hashable {
+    static func == (lhs: AnimalImageViewModel, rhs: AnimalImageViewModel) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     var id: Int
     var name: String
     var imageStringUrl: String
@@ -42,11 +46,11 @@ class AnimalImageViewModel {
         self.isFavorite = false
     }
     
-    func update(with photo: Photo) {
-        self.id = photo.id
-        self.imageStringUrl = photo.src?.small ?? ""
-        self.photographer = photo.photographer ?? ""
-        self.alt = photo.alt ?? ""
-        self.isFavorite = false
+    mutating func update(with photo: Photo) {
+        id = photo.id
+        imageStringUrl = photo.src?.small ?? ""
+        photographer = photo.photographer ?? ""
+        alt = photo.alt ?? ""
+        isFavorite = false
     }
 }

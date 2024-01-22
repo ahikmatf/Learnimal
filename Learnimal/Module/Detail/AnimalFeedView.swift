@@ -17,15 +17,13 @@ struct AnimalFeedView: View {
         ScrollView {
             LazyVStack(spacing: 0) {
                 ForEach(0..<viewModel.animalImages.count, id: \.self) { index in
-                    var animalImage = viewModel.animalImages[index]
+                    let animalImage = viewModel.animalImages[index]
                     
                     FeedCell(
-                        model: FeedModel(name: nil, imageId: "\(animalImage.id)", imageStringUrl: animalImage.imageStringUrl, title: animalImage.photographer, subtitle: animalImage.alt, isFavorite: animalImage.isFavorite),
+                        model: FeedModel(imageViewModel: animalImage),
                         likeable: true,
                         imageDidDoubleTap: {
-                            animalImage.isFavorite.toggle()
-                            imageDidDoubleTap(isFavorite: animalImage.isFavorite, model: animalImage)
-                            viewModel.animalImages[index].isFavorite = animalImage.isFavorite
+                            imageDidDoubleTap(isFavorite: !animalImage.isFavorite, model: animalImage)
                         }
                     )
                 }
@@ -34,8 +32,9 @@ struct AnimalFeedView: View {
         }
         .onAppear {
             showTabBar = false
-            viewModel.fetchAnimalImages(name: name)
-            viewModel.markFavoriteImages()
+            viewModel.fetchAnimalImages(name: name) {
+                viewModel.markFavoriteImages()
+            }
         }
         .onDisappear { showTabBar = true }
         .toolbar(showTabBar ? .visible : .hidden, for: .tabBar)

@@ -14,6 +14,15 @@ struct FeedModel {
     let title: String
     let subtitle: String
     let isFavorite: Bool
+    
+    init(imageViewModel: AnimalImageViewModel) {
+        self.name = imageViewModel.name
+        self.imageId = "\(imageViewModel.id)"
+        self.imageStringUrl = imageViewModel.imageStringUrl
+        self.title = imageViewModel.photographer
+        self.subtitle = imageViewModel.alt
+        self.isFavorite = imageViewModel.isFavorite
+    }
 }
 
 struct FeedCell: View {
@@ -76,7 +85,7 @@ struct FeedCell: View {
 
 #Preview {
     FeedCell(
-        model: FeedModel(name: "the name", imageId: "", imageStringUrl: "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/B000468.jpg", title: "critopher colombus", subtitle: "animal is fighing for his life", isFavorite: true),
+        model: FeedModel(imageViewModel: .init(name: "name")),
         imageDidDoubleTap: {}
     )
 }
