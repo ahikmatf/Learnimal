@@ -40,6 +40,7 @@
 		E98DC3362B5EB30F0027EC3E /* PersistenceStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3352B5EB30F0027EC3E /* PersistenceStoreMock.swift */; };
 		E98DC3382B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3372B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift */; };
 		E9A841542B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A841532B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift */; };
+		E9A841562B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A841552B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		E98DC3372B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFeedViewModelTests.swift; sourceTree = "<group>"; };
 		E98DC3392B5EB6DE0027EC3E /* Learnimal.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Learnimal.xctestplan; sourceTree = "<group>"; };
 		E9A841532B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimalViewModelTests.swift; sourceTree = "<group>"; };
+		E9A841552B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceSheetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				E98DC3032B5AB0AC0027EC3E /* HomeAnimalViewModel.swift */,
+				E9A841552B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				E98DC3112B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift in Sources */,
 				E98DC2FE2B5907050027EC3E /* AnimalVarianceCell.swift in Sources */,
 				E98DC31E2B5BD14A0027EC3E /* AnimalVarianceResult.swift in Sources */,
+				E9A841562B5EBB8A00AE3882 /* AnimalVarianceSheetViewModel.swift in Sources */,
 				E98DC3302B5EB2730027EC3E /* SelectionCell.swift in Sources */,
 				E98DC3042B5AB0AC0027EC3E /* HomeAnimalViewModel.swift in Sources */,
 				E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */,
