@@ -55,7 +55,8 @@ struct SelectionCell: View {
                 Image(systemName: "checkmark")
                     .foregroundColor(.accentColor)
             }
-        }   
+        }
+        .contentShape(Rectangle())
         .onTapGesture {
             self.selectedOption = self.option
         }
