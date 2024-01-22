@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct FeedModel {
-    let name: String?
-    let imageId: String?
+    let name: String
+    let imageId: String
     let imageStringUrl: String
     let title: String
     let subtitle: String
@@ -34,7 +34,9 @@ struct FeedCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(model.name ?? model.imageId ?? "")
+                Text("\(model.name) (\(model.imageId))")
+                    .font(.headline)
+                    .fontWeight(.bold)
                 
                 Spacer()
                 
@@ -74,8 +76,11 @@ struct FeedCell: View {
             }
             
             Text(model.title)
+                .font(.subheadline)
+                .fontWeight(.semibold)
             
             Text(model.subtitle)
+                .font(.caption)
             
             Divider()
                 .padding(.vertical)
@@ -85,7 +90,7 @@ struct FeedCell: View {
 
 #Preview {
     FeedCell(
-        model: FeedModel(imageViewModel: .init(name: "name")),
+        model: FeedModel(imageViewModel: .init(id: 123, name: "Animal", imageStringUrl: "https://raw.githubusercontent.com/unitedstates/images/gh-pages/congress/450x550/A000360.jpg", photographer: "Peter Parker", alt: "Knowing is believing the things", isFavorite: true)),
         imageDidDoubleTap: {}
     )
 }
