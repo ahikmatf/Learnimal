@@ -30,12 +30,13 @@
 		E98DC30A2B5AC78D0027EC3E /* AnimalFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3092B5AC78D0027EC3E /* AnimalFeedViewModel.swift */; };
 		E98DC3112B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3102B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift */; };
 		E98DC3142B5B02570027EC3E /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3132B5B02570027EC3E /* PersistenceStore.swift */; };
-		E98DC3172B5BC0390027EC3E /* IdGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3162B5BC0390027EC3E /* IdGenerator.swift */; };
 		E98DC31B2B5BD0B50027EC3E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC31A2B5BD0B50027EC3E /* APIManager.swift */; };
 		E98DC31E2B5BD14A0027EC3E /* AnimalVarianceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC31D2B5BD14A0027EC3E /* AnimalVarianceResult.swift */; };
 		E98DC3202B5C16880027EC3E /* AnimalImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC31F2B5C16880027EC3E /* AnimalImageResult.swift */; };
 		E98DC3232B5C38DD0027EC3E /* AnimalImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3222B5C38DC0027EC3E /* AnimalImageViewModel.swift */; };
 		E98DC3292B5EA6E00027EC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98DC3282B5EA6E00027EC3E /* LaunchScreen.storyboard */; };
+		E98DC32D2B5EB2400027EC3E /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC32C2B5EB2400027EC3E /* FeedModel.swift */; };
+		E98DC3302B5EB2730027EC3E /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC32F2B5EB2730027EC3E /* SelectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,12 +83,13 @@
 		E98DC3092B5AC78D0027EC3E /* AnimalFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFeedViewModel.swift; sourceTree = "<group>"; };
 		E98DC3102B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFeedViewModel.swift; sourceTree = "<group>"; };
 		E98DC3132B5B02570027EC3E /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
-		E98DC3162B5BC0390027EC3E /* IdGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdGenerator.swift; sourceTree = "<group>"; };
 		E98DC31A2B5BD0B50027EC3E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E98DC31D2B5BD14A0027EC3E /* AnimalVarianceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalVarianceResult.swift; sourceTree = "<group>"; };
 		E98DC31F2B5C16880027EC3E /* AnimalImageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImageResult.swift; sourceTree = "<group>"; };
 		E98DC3222B5C38DC0027EC3E /* AnimalImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalImageViewModel.swift; sourceTree = "<group>"; };
 		E98DC3282B5EA6E00027EC3E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E98DC32C2B5EB2400027EC3E /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		E98DC32F2B5EB2730027EC3E /* SelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				E98DC3192B5BCF5D0027EC3E /* Network */,
-				E98DC3152B5BC0200027EC3E /* Helper */,
 				E98DC3122B5B02450027EC3E /* Persistence */,
 				E98DC2E12B56E4E60027EC3E /* Module */,
 				E98DC2E02B56E4D00027EC3E /* App */,
@@ -208,8 +209,8 @@
 		E98DC2E32B56E5080027EC3E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC3332B5EB2AA0027EC3E /* ViewModel */,
 				E98DC3082B5AB32E0027EC3E /* View */,
-				E98DC3032B5AB0AC0027EC3E /* HomeAnimalViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -217,8 +218,8 @@
 		E98DC2E42B56E5100027EC3E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				E98DC2F02B578C960027EC3E /* AnimalFeedView.swift */,
-				E98DC3092B5AC78D0027EC3E /* AnimalFeedViewModel.swift */,
+				E98DC3322B5EB29E0027EC3E /* ViewModel */,
+				E98DC3312B5EB2990027EC3E /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -226,8 +227,8 @@
 		E98DC2E52B56E5240027EC3E /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC32E2B5EB2540027EC3E /* ViewModel */,
 				E98DC30E2B5AFFB40027EC3E /* View */,
-				E98DC3102B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -235,9 +236,9 @@
 		E98DC2E62B56E5410027EC3E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC32B2B5EB22F0027EC3E /* Model */,
+				E98DC32A2B5EB2250027EC3E /* View */,
 				E98DC3212B5C38BD0027EC3E /* ViewModel */,
-				E98DC2F22B578D780027EC3E /* FeedCell.swift */,
-				E98DC3012B5A78CE0027EC3E /* RemoteImageView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -279,14 +280,6 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		E98DC3152B5BC0200027EC3E /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				E98DC3162B5BC0390027EC3E /* IdGenerator.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		E98DC3192B5BCF5D0027EC3E /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +302,56 @@
 			isa = PBXGroup;
 			children = (
 				E98DC3222B5C38DC0027EC3E /* AnimalImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E98DC32A2B5EB2250027EC3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2F22B578D780027EC3E /* FeedCell.swift */,
+				E98DC3012B5A78CE0027EC3E /* RemoteImageView.swift */,
+				E98DC32F2B5EB2730027EC3E /* SelectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E98DC32B2B5EB22F0027EC3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC32C2B5EB2400027EC3E /* FeedModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E98DC32E2B5EB2540027EC3E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC3102B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E98DC3312B5EB2990027EC3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC2F02B578C960027EC3E /* AnimalFeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E98DC3322B5EB29E0027EC3E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC3092B5AC78D0027EC3E /* AnimalFeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E98DC3332B5EB2AA0027EC3E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC3032B5AB0AC0027EC3E /* HomeAnimalViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -445,10 +488,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98DC2BB2B56DC770027EC3E /* Persistence.swift in Sources */,
-				E98DC3172B5BC0390027EC3E /* IdGenerator.swift in Sources */,
 				E98DC2B42B56DC750027EC3E /* ContentView.swift in Sources */,
 				E98DC2EB2B56E8B50027EC3E /* HomeAnimalView.swift in Sources */,
 				E98DC31B2B5BD0B50027EC3E /* APIManager.swift in Sources */,
+				E98DC32D2B5EB2400027EC3E /* FeedModel.swift in Sources */,
 				E98DC2B22B56DC750027EC3E /* LearnimalApp.swift in Sources */,
 				E98DC2BE2B56DC770027EC3E /* Learnimal.xcdatamodeld in Sources */,
 				E98DC2E92B56E6540027EC3E /* MainTabView.swift in Sources */,
@@ -464,6 +507,7 @@
 				E98DC3112B5AFFCE0027EC3E /* FavoriteFeedViewModel.swift in Sources */,
 				E98DC2FE2B5907050027EC3E /* AnimalVarianceCell.swift in Sources */,
 				E98DC31E2B5BD14A0027EC3E /* AnimalVarianceResult.swift in Sources */,
+				E98DC3302B5EB2730027EC3E /* SelectionCell.swift in Sources */,
 				E98DC3042B5AB0AC0027EC3E /* HomeAnimalViewModel.swift in Sources */,
 				E98DC2EF2B56F45E0027EC3E /* AnimalVarianceSheetView.swift in Sources */,
 				E98DC30A2B5AC78D0027EC3E /* AnimalFeedViewModel.swift in Sources */,

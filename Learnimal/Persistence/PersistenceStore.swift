@@ -33,15 +33,18 @@ class PersistenceStore: PersistenceStoreProtocol {
     func addImageAsFavorite(model: AnimalImageViewModel) {
         let animalImageMO = AnimalImageMO(context: viewContext)
         animalImageMO.save(imageViewModel: model)
+        
         try? viewContext.save()
     }
     
     func removeImageFromFavorite(model: AnimalImageViewModel) {
-        let  fetchRequest = NSFetchRequest<AnimalImageMO>(entityName: "AnimalImageMO")
+        let fetchRequest = NSFetchRequest<AnimalImageMO>(entityName: "AnimalImageMO")
         fetchRequest.predicate = NSPredicate(format: "id = %@", "\(model.id)")
+        
         let results = try? viewContext.fetch(fetchRequest)
         guard let obj = results?.first else { return }
         viewContext.delete(obj)
+        
         try? viewContext.save()
     }
 }

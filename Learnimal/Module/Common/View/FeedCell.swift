@@ -7,24 +7,6 @@
 
 import SwiftUI
 
-struct FeedModel {
-    let name: String
-    let imageId: String
-    let imageStringUrl: String
-    let title: String
-    let subtitle: String
-    let isFavorite: Bool
-    
-    init(imageViewModel: AnimalImageViewModel) {
-        self.name = imageViewModel.name
-        self.imageId = "\(imageViewModel.id)"
-        self.imageStringUrl = imageViewModel.imageStringUrl
-        self.title = imageViewModel.photographer
-        self.subtitle = imageViewModel.alt
-        self.isFavorite = imageViewModel.isFavorite
-    }
-}
-
 struct FeedCell: View {
     var model: FeedModel
     var likeable = false

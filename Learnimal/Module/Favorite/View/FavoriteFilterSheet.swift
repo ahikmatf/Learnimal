@@ -42,27 +42,6 @@ struct FavoriteFilterSheet: View {
     }
 }
 
-struct SelectionCell: View {
-
-    let option: String
-    @Binding var selectedOption: String
-
-    var body: some View {
-        HStack {
-            Text(option)
-            Spacer()
-            if option == selectedOption {
-                Image(systemName: "checkmark")
-                    .foregroundColor(.accentColor)
-            }
-        }
-        .contentShape(Rectangle())
-        .onTapGesture {
-            self.selectedOption = self.option
-        }
-    }
-}
-
 #Preview {
     FavoriteFilterSheet(filterDidTap: { selectedOption in
         //
