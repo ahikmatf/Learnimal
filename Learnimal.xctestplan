@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "9C402481-374A-41A2-A692-7CFE59FB26FC",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Learnimal.xcodeproj",
+      "identifier" : "E98DC2AD2B56DC750027EC3E",
+      "name" : "Learnimal"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Learnimal.xcodeproj",
+        "identifier" : "E98DC2C22B56DC770027EC3E",
+        "name" : "LearnimalTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Learnimal.xcodeproj",
+        "identifier" : "E98DC2CC2B56DC770027EC3E",
+        "name" : "LearnimalUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

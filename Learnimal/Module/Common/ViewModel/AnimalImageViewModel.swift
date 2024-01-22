@@ -37,8 +37,8 @@ struct AnimalImageViewModel: Identifiable, Hashable {
         self.isFavorite = false
     }
 
-    init(name: String) {
-        self.id = -1
+    init(id: Int = -1, name: String) {
+        self.id = id
         self.name = name
         self.imageStringUrl = ""
         self.photographer = ""

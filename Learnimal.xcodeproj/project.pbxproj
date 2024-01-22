@@ -37,6 +37,9 @@
 		E98DC3292B5EA6E00027EC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98DC3282B5EA6E00027EC3E /* LaunchScreen.storyboard */; };
 		E98DC32D2B5EB2400027EC3E /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC32C2B5EB2400027EC3E /* FeedModel.swift */; };
 		E98DC3302B5EB2730027EC3E /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC32F2B5EB2730027EC3E /* SelectionCell.swift */; };
+		E98DC3362B5EB30F0027EC3E /* PersistenceStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3352B5EB30F0027EC3E /* PersistenceStoreMock.swift */; };
+		E98DC3382B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98DC3372B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift */; };
+		E9A841542B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A841532B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,10 @@
 		E98DC3282B5EA6E00027EC3E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E98DC32C2B5EB2400027EC3E /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		E98DC32F2B5EB2730027EC3E /* SelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCell.swift; sourceTree = "<group>"; };
+		E98DC3352B5EB30F0027EC3E /* PersistenceStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStoreMock.swift; sourceTree = "<group>"; };
+		E98DC3372B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFeedViewModelTests.swift; sourceTree = "<group>"; };
+		E98DC3392B5EB6DE0027EC3E /* Learnimal.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Learnimal.xctestplan; sourceTree = "<group>"; };
+		E9A841532B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimalViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +127,7 @@
 		E98DC2A52B56DC750027EC3E = {
 			isa = PBXGroup;
 			children = (
+				E98DC3392B5EB6DE0027EC3E /* Learnimal.xctestplan */,
 				E98DC2B02B56DC750027EC3E /* Learnimal */,
 				E98DC2C62B56DC770027EC3E /* LearnimalTests */,
 				E98DC2D02B56DC770027EC3E /* LearnimalUITests */,
@@ -162,7 +170,10 @@
 		E98DC2C62B56DC770027EC3E /* LearnimalTests */ = {
 			isa = PBXGroup;
 			children = (
+				E98DC3342B5EB2F60027EC3E /* Mocks */,
 				E98DC2C72B56DC770027EC3E /* LearnimalTests.swift */,
+				E98DC3372B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift */,
+				E9A841532B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift */,
 			);
 			path = LearnimalTests;
 			sourceTree = "<group>";
@@ -356,6 +367,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E98DC3342B5EB2F60027EC3E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E98DC3352B5EB30F0027EC3E /* PersistenceStoreMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -519,6 +538,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98DC2C82B56DC770027EC3E /* LearnimalTests.swift in Sources */,
+				E98DC3362B5EB30F0027EC3E /* PersistenceStoreMock.swift in Sources */,
+				E98DC3382B5EB39C0027EC3E /* FavoriteFeedViewModelTests.swift in Sources */,
+				E9A841542B5EBA9E00AE3882 /* HomeAnimalViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
