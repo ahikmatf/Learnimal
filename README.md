@@ -8,7 +8,7 @@ To begin with, I was given project requirements documents. I read that then I st
 
 Next, I try to create a UI so I can imagine what the end would look like, it helps me to visualize the approach I need to take, the coding steps, and etc. I come up with this image. I assuming that user needs to be able to see animal first time they see the homepage. And going with familiar view so they have natural instict to know what to do. That's why the things looks like Instagram and homepage looks like few app that has big image. And having tab bar interface make them easier to see the main feature of the app.
 
-![](https://lh3.googleusercontent.com/pw/ABLVV8746tk6wregLRnt89Ndh0qB40Dey5BAy4LEGipDlU9I2_mfCZLrp8LU-IYuiTsPsz98q0D3j4qaAcTDajrSmKjWMIxKTKZRKiqWss5hYF4WhaXcy0S8QZ8kpm8g-DCqxG_H3ikizMthtnqXbQW3N24p41KMm8dAiauMNWG7Awp_9MwFZoEJo4rEuzjRQ-9uCHBUvtwyEOOzIZ1XkjrEqzI-OehMcQDgvwHQIRvcSuf-giLuxVSca3uhfozbKR3IrFj6BmtRQIJ2i5tLrdKkD36p6haMnXZinTND1ZoV1jRlA6c9dvuAgo9I1_--rJi5o8CeqAw5c-IxVlXGqa5tuKwE9wCMyWFR7ZU6E-6nPEIk3Ow0z8nONnb_V47fON8CnbHF2zKHH8o7vF5Q9AU9zhDuEcV_os2IfD4gWp0tHMvU3eUXBKXvRDS9d_ExFWdIFx9Yh8Tk8pwV3d8N-MjOg8XbcrkxNwohNMEFZzgWjm_zHg3nEF1VU-zf2CHmUkJu8AOJMpstozsyFT7o1QMGgXvVdm3NY7_s73LFpJ3tRkn6vDJ8LMYpt21dxTb4HaXXqag3eyXZ_gsUSt7uMvDKZcE9U8guELwc07ryMUCAU-8U3JOlfYwMk_RxOmlYW2UA2n9EhU4tOYTRgAH5MPTZFjCw-Mb9apdjSomEINK14x0FXNAPsWJPzVeijpAQHCHTLAQ8Z5e1ywIZ_LuXREMN9I3EpIzf-KrPEd4KPR-gxTV9R6uVCgA-toA2_MFJwXq5KbYSwBrtgPjyqyWsns4FXZyrLILJBH-RPhJRRwriJ98cJ8lzmrqhMo4GHu5Ml8F-fekruBKWkTiTkIweZtoF6L748oyEa7GR2GNEQmYZVZW_vzbNN0mqzA2pJxvz3dQqpJwJieU7fZQoKbs5OQ10hoUdO1c7ZMke=w2160-h1620-s-no?authuser=1)
+![](https://github.com/ahikmatf/Learnimal/blob/main/IMG_0210.jpg)
 
 After that, I elaborate on technical details, like what kind architecture will I use, should I use external framework or just natives one, should I use SwiftUI or UIKit, since there will be lots of images in the app, should I consider caching or not, and because I rarely work on Core Data on my previous company, since mostly data saved on the backend and just simple singleton/user preference, I need to dig more on that for current project.
 
@@ -29,3 +29,8 @@ And while working on it, I also found issue here and there so there are addition
 It's very simple, just clone the repo and run it on Xcode. 
 - The project itself has minimum requirements of iOS 17.2, nothing specific, it's just default settings.
 - Also I run it on Xcode 15.1.
+
+---
+
+### Preview
+https://github.com/ahikmatf/Learnimal/blob/main/Learnimal%20-%20480p.mp4
